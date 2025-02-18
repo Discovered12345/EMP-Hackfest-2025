@@ -1,0 +1,49 @@
+/* Card container */
+.card {
+  position: relative;
+  padding: 1.5rem;
+  background: rgba(22, 22, 23, 0.8);
+  border-radius: 20px;
+  margin: 1rem auto;
+  max-width: 1400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.05));
+  border-radius: 20px;
+  z-index: -1;
+}
+
+/* Ambient light effect */
+.ambient-light {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.03) 0%,
+    transparent 50%
+  );
+  z-index: 1;
+}
+
+/* App content */
+.app-content {
+  min-height: 100vh;
+  padding-top: 52px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.01em;
+}

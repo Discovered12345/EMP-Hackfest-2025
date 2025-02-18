@@ -1,0 +1,37 @@
+runtime: nodejs20
+
+env: standard
+instance_class: F1
+
+automatic_scaling:
+  target_cpu_utilization: 0.65
+  min_instances: 1
+  max_instances: 10
+
+env_variables:
+  NODE_ENV: "production"
+  VITE_GOOGLE_MAPS_API_KEY: "AIzaSyCExTp8r8aszeyxMO7JMbonn1JZdFJGK4s"
+
+handlers:
+  - url: /(assets/.*)
+    static_files: dist/\1
+    upload: dist/assets/.*
+
+  # Serve root static files
+  - url: /(.*\.(js|css|ico|png|json))
+    static_files: dist/\1
+    upload: dist/.*\.(js|css|ico|png|json)$
+
+  - url: /.*
+    static_files: dist/index.html
+    upload: dist/index.html
+
+build_env_variables:
+  VITE_GOOGLE_MAPS_API_KEY: "AIzaSyCExTp8r8aszeyxMO7JMbonn1JZdFJGK4s"
+
+before_install:
+  - npm install -g npm@latest
+
+build:
+  - npm ci
+  - npm run build

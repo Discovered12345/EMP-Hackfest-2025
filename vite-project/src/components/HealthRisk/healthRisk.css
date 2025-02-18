@@ -1,0 +1,274 @@
+.health-risk-container {
+  max-width: 800px;
+  margin: 140px auto 40px;
+  padding: 40px;
+  background: rgba(22, 22, 23, 0.8);
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f5f5f7;
+  animation: fadeIn 0.8s ease, slideUp 0.8s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.health-risk-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.health-risk-container h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: -0.002em;
+}
+
+.risk-assessment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+  animation-delay: calc(var(--index, 0) * 0.1s);
+}
+
+.form-group:nth-child(1) { --index: 1; }
+.form-group:nth-child(2) { --index: 2; }
+.form-group:nth-child(3) { --index: 3; }
+.form-group:nth-child(4) { --index: 4; }
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-group input[type="number"],
+.form-group select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(17, 17, 17, 0.8);
+  color: #f5f5f7;
+  font-size: 16px;
+  backdrop-filter: blur(10px);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23f5f5f7' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+.form-group select option {
+  background: rgba(17, 17, 17, 0.95);
+  color: #f5f5f7;
+  padding: 12px;
+}
+
+.form-group select:hover {
+  border-color: rgba(94, 106, 210, 0.3);
+  background-color: rgba(17, 17, 17, 0.9);
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: rgba(94, 106, 210, 0.5);
+  background-color: rgba(17, 17, 17, 0.95);
+}
+
+.form-group input[type="number"]::-webkit-inner-spin-button,
+.form-group input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-group input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.submit-button, .reset-button {
+  padding: 16px 32px;
+  background: #2997ff;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 16px;
+}
+
+.submit-button:hover, .reset-button:hover {
+  background: #147ce5;
+  transform: translateY(-1px);
+}
+
+.results-container {
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.risk-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  padding: 32px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  animation: scaleIn 0.5s ease forwards;
+}
+
+.score {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.risk-level {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.risk-score.low { color: #34c759; }
+.risk-score.moderate { color: #ff9f0a; }
+.risk-score.high { color: #ff453a; }
+
+.recommendations {
+  text-align: left;
+  margin-top: 40px;
+}
+
+.recommendations h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.recommendations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recommendations li {
+  margin-bottom: 12px;
+  padding-left: 24px;
+  position: relative;
+  animation: slideIn 0.5s ease forwards;
+  opacity: 0;
+  animation-delay: calc(var(--index, 0) * 0.1s);
+}
+
+.recommendations li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2997ff;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.recommendations li:nth-child(1) { --index: 1; }
+.recommendations li:nth-child(2) { --index: 2; }
+.recommendations li:nth-child(3) { --index: 3; }
+.recommendations li:nth-child(4) { --index: 4; }
+
+@media (max-width: 768px) {
+  .health-risk-container {
+    margin: 20px;
+    padding: 24px;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.location-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.location-info p {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+} 

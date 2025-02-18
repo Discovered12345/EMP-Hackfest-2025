@@ -1,0 +1,24 @@
+/* Button styles */
+.primary-cta, .secondary-cta {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.primary-cta {
+  background: linear-gradient(135deg, #009DFF 0%, #0077FF 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Rest of button styles... */ 

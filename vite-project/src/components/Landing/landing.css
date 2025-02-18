@@ -1,0 +1,109 @@
+.minimal-landing {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000 !important;
+  color: #f5f5f7;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 0 24px;
+  position: relative;
+  background-color: #000000;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -0.002em;
+  color: #f5f5f7;
+  text-shadow: 0 0 30px rgba(41, 151, 255, 0.3);
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+}
+
+.button-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 12px 24px;
+  border-radius: 12px;
+  background: rgba(41, 151, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.button-link:hover {
+  background: rgba(41, 151, 255, 0.4);
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.button-icon {
+  color: #ffffff;
+}
+
+.tag {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  margin-top: 16px;
+  letter-spacing: -0.01em;
+}
+
+/* Ambient light effect */
+.content::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(41, 151, 255, 0.05) 0%,
+    rgba(41, 151, 255, 0.02) 25%,
+    transparent 50%
+  );
+  pointer-events: none;
+  transform: scale(1.5);
+  filter: blur(20px);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 42px;
+  }
+
+  .links {
+    gap: 20px;
+  }
+
+  .links a {
+    font-size: 15px;
+    padding: 6px 12px;
+  }
+} 

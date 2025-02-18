@@ -1,0 +1,193 @@
+/* Map layout styles */
+.map-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Controls section */
+.map-sidebar {
+  background: rgba(22, 22, 23, 0.8);
+  border-radius: 24px;
+  padding: 32px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.8s ease;
+  margin-bottom: 20px;
+}
+
+.controls-container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Search box styles */
+.search-box {
+  flex: 1;
+  max-width: 400px;
+  height: 45px;
+}
+
+.search-box input {
+  width: 100%;
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #f5f5f7;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.search-box input:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-box input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #2997ff;
+  box-shadow: 0 0 0 4px rgba(41, 151, 255, 0.1);
+}
+
+/* Control buttons */
+.control-button {
+  margin-top: 25px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.control-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.control-button.active {
+  background: rgba(41, 151, 255, 0.1);
+  border-color: rgba(41, 151, 255, 0.3);
+  color: #2997ff;
+}
+
+/* Radius control */
+.radius-control {
+  flex: 0 0 auto;
+  width: 160px;
+  display: flex;
+  align-items: center;
+}
+
+.radius-select {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #f5f5f7;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23f5f5f7' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  text-align: center;
+  text-align-last: center;
+  -moz-text-align-last: center;
+}
+
+/* Style the options as well for better cross-browser support */
+.radius-select option {
+  text-align: center;
+}
+
+.radius-select:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Map container */
+.map-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(22, 22, 23, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 600px;
+  backdrop-filter: blur(20px);
+  animation: fadeIn 0.8s ease;
+}
+
+.map-wrapper {
+  position: relative;
+  height: 100%;
+  min-height: 600px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .map-layout {
+    padding: 20px;
+    gap: 24px;
+    margin: 20px auto;
+  }
+
+  .map-sidebar {
+    padding: 24px;
+  }
+
+  .controls-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .search-box,
+  .control-button,
+  .radius-control {
+    width: 100%;
+  }
+
+  .map-container {
+    min-height: 400px;
+  }
+
+  .map-wrapper {
+    min-height: 400px;
+  }
+} 

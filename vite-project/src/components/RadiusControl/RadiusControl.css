@@ -1,0 +1,50 @@
+.radius-control {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.radius-button {
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.radius-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.radius-button.active {
+  background: rgba(41, 151, 255, 0.2);
+  border-color: #2997ff;
+  color: #2997ff;
+}
+
+.radius-dropdown {
+  margin: 0 8px;
+}
+
+.radius-select {
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  min-width: 120px;
+}
+
+.radius-select:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.radius-select option {
+  background: #1c1c1e;
+  color: rgba(255, 255, 255, 0.8);
+} 

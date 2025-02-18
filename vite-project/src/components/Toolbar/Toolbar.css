@@ -1,0 +1,74 @@
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  background: rgba(22, 22, 23, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 9999;
+}
+
+.toolbar-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-brand {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #f5f5f7;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.toolbar-links {
+  display: flex;
+  gap: 28px;
+}
+
+.toolbar-link {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  letter-spacing: -0.01em;
+  line-height: 52px;
+}
+
+.toolbar-link:hover {
+  color: #ffffff;
+}
+
+.toolbar-link.active {
+  color: #2997ff;
+}
+
+/* Adjust main content to account for fixed toolbar */
+.app-content {
+  padding-top: 52px;
+}
+
+@media (max-width: 768px) {
+  .toolbar-content {
+    padding: 0 16px;
+  }
+
+  .toolbar-links {
+    gap: 16px;
+  }
+} 

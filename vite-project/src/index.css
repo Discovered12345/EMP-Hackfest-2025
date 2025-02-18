@@ -1,0 +1,106 @@
+:root {
+  /* Color palette */
+  --primary-color: #5E6AD2;
+  --primary-dark: #4A54B8;
+  --background-dark: #0B1218;
+  --background-light: rgba(255, 255, 255, 0.1);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.9);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --glass-background: rgba(21, 21, 21, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  
+  /* Typography */
+  --font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  --heading-line-height: 1.2;
+  --body-line-height: 1.6;
+
+  /* Transitions */
+  --transition-quick: 0.2s ease;
+  --transition-normal: 0.3s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--background-dark);
+  color: var(--text-primary);
+  line-height: var(--body-line-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--heading-line-height);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Glass morphism base styles */
+.glass-panel {
+  background: var(--glass-background);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(17, 17, 17, 0.8);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(94, 106, 210, 0.3);
+  border-radius: 4px;
+  transition: var(--transition-quick);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(94, 106, 210, 0.5);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.1rem; }
+  h6 { font-size: 1rem; }
+}

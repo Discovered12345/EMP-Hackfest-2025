@@ -1,0 +1,108 @@
+.air-quality-info {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #fff;
+}
+
+.air-quality-info h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.info-section {
+  margin-bottom: 2.5rem;
+  background: rgba(21, 21, 21, 0.7);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.info-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.info-section p {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+}
+
+.effects-grid, .protection-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.effect-item, .method-item {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.effect-item h4, .method-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.effect-item ul, .method-item ul, .risk-groups ul, .warning-signs ul {
+  list-style: none;
+  padding: 0;
+}
+
+.effect-item li, .method-item li, .risk-groups li, .warning-signs li {
+  margin-bottom: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.4;
+}
+
+.effect-item li::before, .method-item li::before, .warning-signs li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #5E6AD2;
+}
+
+.risk-groups li {
+  padding-left: 0;
+}
+
+.risk-groups strong {
+  color: #5E6AD2;
+  margin-right: 0.5rem;
+}
+
+.warning-signs p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .air-quality-info {
+    padding: 1rem;
+  }
+
+  .info-section {
+    padding: 1.5rem;
+  }
+
+  .air-quality-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-section h3 {
+    font-size: 1.2rem;
+  }
+} 
