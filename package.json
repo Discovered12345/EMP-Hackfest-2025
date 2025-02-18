@@ -1,5 +1,29 @@
 {
   "dependencies": {
-    "@react-google-maps/api": "^2.20.6"
-  }
+    "@react-google-maps/api": "^2.20.6",
+    "rc-slider": "^11.1.8",
+    "react-router-dom": "^7.1.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.1.0"
+  },
+  "name": "aqua",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeff1454/Aqua2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jeff1454/Aqua2/issues"
+  },
+  "homepage": "https://github.com/Jeff1454/Aqua2#readme",
+  "description": ""
 }
