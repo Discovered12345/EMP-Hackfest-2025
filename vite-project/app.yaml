@@ -10,7 +10,7 @@ automatic_scaling:
 
 env_variables:
   NODE_ENV: "production"
-  VITE_GOOGLE_MAPS_API_KEY: "AIzaSyCExTp8r8aszeyxMO7JMbonn1JZdFJGK4s"
+  VITE_GOOGLE_MAPS_API_KEY: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 handlers:
   - url: /(assets/.*)
@@ -27,7 +27,7 @@ handlers:
     upload: dist/index.html
 
 build_env_variables:
-  VITE_GOOGLE_MAPS_API_KEY: "AIzaSyCExTp8r8aszeyxMO7JMbonn1JZdFJGK4s"
+  VITE_GOOGLE_MAPS_API_KEY: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 before_install:
   - npm install -g npm@latest
