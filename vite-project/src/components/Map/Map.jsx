@@ -2,7 +2,7 @@ import { GoogleMap } from '@react-google-maps/api';
 import { mapStyles } from './mapStyles';
 import { useState, useEffect } from 'react';
 
-const DEMO_API_KEY = 'AIzaSyCExTp8r8aszeyxMO7JMbonn1JZdFJGK4s';
+const DEMO_API_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 const Map = ({ center, showAirQuality, zoom, radius }) => {
   // Store map and air quality layer instances
